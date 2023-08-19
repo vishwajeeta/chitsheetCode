@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show data</title>
+    <style>
+        div{
+            width: auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/" style="color: orange;text-decoration: none;"><< back</a><br>
+    <br>
+    <div>
+    {% for data in data %}
+    <h1>{{data.topic}}</h1>
+    <br>
+    <h3>
+        {{data.discription}}
+    </h3>
+    <br>
+    {{data.information |safe}}
+    
+    {% endfor %}
+    </div>
+</body>
+</html>
