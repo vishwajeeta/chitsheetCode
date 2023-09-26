@@ -23,7 +23,7 @@ def search(request):
             username_profile_list.append(profile_lists)
         
         username_profile_list = list(chain(*username_profile_list))
-    return render(request, 'search.html', { 'data': username_profile_list})
+    return render(request, 'search.html', { 'data': username_profile_list,'searched':username})
     
 def show_data(request,pk):
     

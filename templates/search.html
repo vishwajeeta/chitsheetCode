@@ -4,44 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Searching</title>
-</head>
-<style>
-#divide{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    word-spacing: 10px;
-}
-#dataset{
-    background-color: whitesmoke;
-    width: 90%;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 7px;
-    cursor: pointer;
-
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
+    <style>
+    #divide{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        word-spacing: 10px;
+    }
+    #dataset{
+        background-color: whitesmoke;
+        width: 90%;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 7px;
+        cursor: pointer;
     
-
-}
-#dataset:hover{
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-#search{
-    text-align: center;
-}
-a{
-    text-decoration: none;
-    color: black;
-}
-
-#inputsearch{
-    padding: 5px;
-    font-size: large;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-</style>
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        
+    
+    }
+    #dataset:hover{
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+    #search{
+        text-align: center;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    #inputsearch{
+        padding: 5px;
+        font-size: large;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    </style>
+</head>
 <body>
     <a href="/" style="color: orangered;"><< Home</a>
     <form action="" method="post" id="search">
@@ -49,6 +49,7 @@ a{
         <input type="text" name="userdata" placeholder="Search chitSheet...." id="inputsearch">
         <button type="submit" id="inputsearch">search</button>
     </form>
+    {% if data %}
     <div id="divide">
     {% for data in data %}
     <a href="{% url 'show_data' data.id %}">
@@ -62,5 +63,8 @@ a{
 </div></a>
     {% endfor %}
 </div>
+{% else %}
+<h1 style="text-align: center;">No Data Found for <p style="color: gray;">{{searched}}</p></h1>
+{% endif %}
 </body>
 </html>
