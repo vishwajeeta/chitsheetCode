@@ -4,6 +4,7 @@ from ckeditor.fields import RichTextField
 # Create your models here.
 language_choice=(
     ("solidity","solidity"),
+    ("Next.js","Next.js"),
     ("solana","solana"),
     ("python","python"),
     ("django","django"),
