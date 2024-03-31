@@ -10,7 +10,8 @@ language_choice=(
     ("django","django"),
     ("javascript","javascript"),
     ("react","react"),
-    ("java","java")
+    ("java","java"),
+    ("other","other")
  )
 class sample(models.Model):
     topic=models.CharField(max_length=100)
