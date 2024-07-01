@@ -4,3 +4,4 @@
 ### solidity
 ### javascript
 ### Linux 
+### bootable pendrive (create | Delete | ENV setup)
