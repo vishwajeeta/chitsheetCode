@@ -1,5 +1,5 @@
 # chitsheetCode
-## chitsheet for all programming languages
+## chitsheet for programming languages
 ### python
 ### solidity
 ### javascript
